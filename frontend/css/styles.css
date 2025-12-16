@@ -1,0 +1,183 @@
+/* 🌈 Global Theme */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Containers for all pages */
+.container {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+/* Headings */
+h2, h4, h5 {
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background: #ff6b6b;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background: #ff4757;
+  transform: scale(1.05);
+}
+.btn-secondary {
+  background: #4b5563;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background: #6b7280;
+  transform: scale(1.05);
+}
+.btn-success {
+  background: #22c55e;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-success:hover {
+  background: #16a34a;
+  transform: scale(1.05);
+}
+.btn-danger {
+  background: #ef4444;
+  border: none;
+}
+.btn-danger:hover {
+  background: #dc2626;
+}
+
+/* Cards */
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  color: #222 !important;
+  font-weight: 500;
+}
+
+.card-body p strong {
+  color: #111;
+  font-weight: 700;
+}
+.card h5 {
+  color: #fff;
+}
+
+/* Input fields */
+.form-control, .form-select {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+  color: #111;
+}
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.5);
+}
+
+/* Hero Section (Home) */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Image styling */
+img.img-fluid {
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.my-donations-box {
+  display: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.dashboard-container {
+  background: linear-gradient(135deg, #5b3cc4, #647dee);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Header with Logout on top right */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.my-donations-box {
+  background: rgba(255, 255, 255, 0.85);
+  color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Consistent top-right logout button */
+.logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4b5c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #e04352;
+  transform: scale(1.05);
+}

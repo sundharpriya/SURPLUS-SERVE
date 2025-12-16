@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surplus Serve - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content">
+      <h1>Welcome to Surplus Serve</h1>
+      <p>Helping reduce food waste by connecting donors with NGOs nearby.</p>
+      <button class="btn btn-primary mt-3" id="loginBtn">Login</button>
+      <button class="btn btn-success mt-3" id="registerBtn">Register</button>
+    </div>
+  </section>
+
+  <!-- Login Form -->
+  <div class="login-container d-none" id="loginForm">
+    <div class="card mx-auto mt-5 p-4 shadow" style="max-width: 400px;">
+      <h4 class="text-center mb-3">Login</h4>
+      <form id="loginFormElement">
+  <input type="email" class="form-control mb-2" id="email" placeholder="Email" required />
+  <input type="password" class="form-control mb-2" id="password" placeholder="Password" required />
+  <select class="form-select mb-3" id="userType" required>
+    <option value="">Select User Type</option>
+    <option value="donor">Donor</option>
+    <option value="ngo">NGO</option>
+  </select>
+  <button type="submit" class="btn btn-primary w-100">Login</button>
+</form>
+
+    </div>
+  </div>
+
+  <!-- Register Form -->
+  <div class="login-container d-none" id="registerForm">
+    <div class="card mx-auto mt-5 p-4 shadow" style="max-width: 400px;">
+      <h4 class="text-center mb-3">Register</h4>
+      <form id="registerFormElement">
+        <input type="text" class="form-control mb-2" placeholder="Name" id="regName" required>
+        <input type="email" class="form-control mb-2" placeholder="Email" id="regEmail" required>
+        <input type="password" class="form-control mb-2" placeholder="Password" id="regPassword" required>
+        <input type="password" class="form-control mb-2" placeholder="Confirm Password" id="regConfirmPassword" required>
+        <input type="text" class="form-control mb-2" placeholder="Phone (10 digits)" id="regPhone" required maxlength="10">
+        <input type="text" class="form-control mb-2" placeholder="City" id="regCity" required>
+        <input type="text" class="form-control mb-2" placeholder="Pincode" id="regPincode" required>
+        <select class="form-select mb-3" id="regUserType" required>
+          <option value="">Select User Type</option>
+          <option value="donor">Donor</option>
+          <option value="ngo">NGO</option>
+        </select>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginBtn = document.getElementById("loginBtn");
+      const registerBtn = document.getElementById("registerBtn");
+      const loginForm = document.getElementById("loginForm");
+      const registerForm = document.getElementById("registerForm");
+      const heroSection = document.querySelector(".hero");
+
+      loginBtn.addEventListener("click", () => {
+        heroSection.classList.add("d-none");
+        registerForm.classList.add("d-none");
+        loginForm.classList.remove("d-none");
+      });
+
+      registerBtn.addEventListener("click", () => {
+        heroSection.classList.add("d-none");
+        loginForm.classList.add("d-none");
+        registerForm.classList.remove("d-none");
+      });
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
